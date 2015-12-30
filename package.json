@@ -1,0 +1,15 @@
+{
+  "name": "workout-thread",
+  "version": "1.0.0",
+  "description": "Parsing the Family workout thread",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ambar Choudhury",
+  "license": "ISC",
+  "dependencies": {
+    "htmlparser": "^1.7.7",
+    "jsdom": "^7.2.2"
+  }
+}
