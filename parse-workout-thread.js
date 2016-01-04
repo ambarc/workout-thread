@@ -72,7 +72,7 @@ var parseWorkoutThread = function(data) {
           if (committed) {
             if (!users[user]['pledges'][timed.month()] ||
                 users[user]['pledges'][timed.month()] < committed) {
-              users[user]['pledges'][timed.month()] = [committed, messageText, meta, dateString]
+              users[user]['pledges'][timed.month()] = committed;//[committed, messageText, meta, dateString]
             }
           }
 
