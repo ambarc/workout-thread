@@ -7,6 +7,10 @@ fs.readFile(process.argv[2], 'utf8', function (err, htmlData) {
   if (err) {
     return console.log(err);
   }
-  workoutParser.parseWorkoutThread(htmlData);
+  var candidates = workoutParser.getWorkoutCandidates(htmlData);
+  fs.writeFile(process.argv[3], JSON.stringify(candidates), function(data) {
+    if (err) throw err;
+    console.log('written candidates');
+  });
 });
 
