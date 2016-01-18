@@ -8,7 +8,8 @@ fs.readFile(process.argv[2], 'utf8', function (err, htmlData) {
     return console.log(err);
   }
   var candidates = workoutParser.getWorkoutCandidates(htmlData);
-  fs.writeFile(process.argv[3], JSON.stringify(candidates), function(data) {
+  var toWrite = JSON.stringify(candidates, null, 4);
+  fs.writeFile(process.argv[3], toWrite, function(data) {
     if (err) throw err;
     console.log('written candidates');
   });
